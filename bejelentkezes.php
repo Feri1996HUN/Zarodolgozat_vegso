@@ -18,7 +18,6 @@ if (isset($_POST["login"])){
 
     // Ellenőrizzük, hogy az illető jogosult-e a kapcsolódásra
     if ($tomb = $db->Bejelentkezes($user, $pass)){
-     // var_dump($tomb);
         session_start();
         $_SESSION["user"] = $user;
         $_SESSION["userid"] = $tomb[0]["ID_user"];

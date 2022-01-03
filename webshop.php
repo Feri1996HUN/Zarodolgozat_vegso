@@ -61,10 +61,6 @@ foreach ($kategoriak as $key) {
     }
 }
 }
-
-
-
-
 ?>
 
 
@@ -254,19 +250,5 @@ foreach ($kategoriak as $key) {
 
   </div>
 </div>
-
-
-<script>
-  const kosar = [];
-    function Kosaram($azonositok) {
-      var kosarazon = Document.getElementById($azonositok);
-      var_dump(kosarazon);
-    }
-
-</script>
-
-
-
-
 </body>
 </html>

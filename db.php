@@ -140,25 +140,7 @@ class Dbconnect{
     
     return $tomb;
     }
-
-    function Mennyisegiegy($uid){
-        $tomb = null;
-        $res = $this->con->prepare("SELECT r.ID_user, r.ID_termek, r.Mennyiseg, t.Nev, t.Eladar FROM rendeles AS r JOIN termekek AS t ON t.ID_termek = r.ID_termek WHERE r.ID_user = :userid");
-
-        $res->bindparam("userid", $uid);
-
-        $res->execute();
-
     
-    while ($row = $res->fetch()) {
-    $tomb[] = $row;
-    }
-    
-    return $tomb;
-    }
-
-
-
     function Rendelesfeltolt($iduser, $idtermek, $mennyiseg){
         $res = $this->con->prepare("INSERT INTO `rendeles`(`ID_user`, `ID_termek`, `Mennyiseg`) VALUES (:iduser,:idtermek,:mennyiseg)");
 
